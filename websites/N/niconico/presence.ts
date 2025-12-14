@@ -81,6 +81,15 @@ presence.on('UpdateData', async () => {
           },
         ]
       }
+      else if (pathname.startsWith('/search/')) {
+        const searchingElement = const span = document.querySelector(
+          '.message:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(1)'
+        );
+
+        presenceData.details = "Searching";
+        presenceData.state = searchingElement.textContent;
+        presenceData.smallImageKey = Assets.Search;
+      }
       break
     }
 
